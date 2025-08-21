@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center mb-4">
+        <h1>🏠 Tableau de bord</h1>
+        <p class="text-muted">Gérez votre catalogue de produits ici.</p>
+      </div>
+
+      <!-- Statistiques -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">📊 Statistiques</h5>
+          <div class="row">
+            <div class="col-6">
+              <p><strong>Nombre de produits</strong></p>
+              <p class="text-success">{{ productCount }}</p>
+            </div>
+            <div class="col-6">
+              <p><strong>Stock total</strong></p>
+              <p class="text-primary">{{ totalStock }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton -->
+      <a routerLink="/products" class="btn btn-primary btn-lg w-100">
+        ➡️ Gérer les produits
+      </a>
+    </div>
+  </div>
+</div>

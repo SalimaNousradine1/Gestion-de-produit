@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <h2>📋 Liste des Produits</h2>
+  <p class="text-muted">Gérez vos produits ici.</p>
+
+  <!-- Bouton Ajouter -->
+  <a class="btn btn-success mb-3" routerLink="/products/new">
+     Ajouter un produit
+  </a>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <!-- ... le reste du tableau ... -->
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Prix</th>
+          <th>Catégorie</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products$ | async">
+          <td>{{ product.nom }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.prix | currency:'EUR' }}</td>
+          <td>{{ product.categorie }}</td>
+          <td>{{ product.stock }}</td>
+          <td>
+            <a routerLink="/products/{{ product.id }}" class="btn btn-sm btn-info">Voir</a>
+            <a routerLink="/products/edit/{{ product.id }}" class="btn btn-sm btn-warning">Modifier</a>
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
