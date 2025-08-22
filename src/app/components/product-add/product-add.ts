@@ -21,3 +21,4 @@ export class ProductAddComponent {
     this.router.navigate(['/products']); // retour à la liste
   }
 }
+
