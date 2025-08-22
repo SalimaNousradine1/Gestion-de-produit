@@ -1,6 +1,4 @@
 <div class="container mt-4">
-  <h2>Ajouter un Produit</h2>
-
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div class="row mb-3">
     
@@ -45,7 +43,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">
-      Ajouter
+      Enregistré
     </button>
     <a routerLink="/products" class="btn btn-secondary">Annuler</a>
   </form>
